@@ -1,9 +1,47 @@
-#home-container{
-    height: 100vh;
-   .title-container{
+#home-container {
+  height: 100vh;
+  .title-container {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-   }
+    h1{
+        font-size: 50px;
+    }
+  }
+  #nav-button {
+    all: unset;
+    margin-top: 24px;
+   text-decoration: underline;
+    color: white;
+    width: 150px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 20px;
+    position: relative;
+color: rgb(41, 41, 41);
+    &:before{
+        content: '';
+        display: block;
+        background-color: rgb(41, 41, 41);
+        border-radius: 20px;
+        inset: 0 0 0 0;
+        z-index: -1;
+        position: absolute;
+        transition: transform 0.5s ease-in-out;
+        transform: scaleY(0);
+        transform-origin: bottom left;
+    }
+    &:hover:before{
+        transform: scaleY(1);
+        transform-origin: bottom right;
+    }
+    &:hover {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+    
+    }
+  }
 }
